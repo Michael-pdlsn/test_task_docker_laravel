@@ -9,6 +9,7 @@ if [ ! -f /var/www/html/vendor/autoload.php ]; then
   composer install --no-interaction
 fi
 
+# Create APP_KEY if it does not exist
 if ! grep -q '^APP_KEY=.\+' /var/www/html/.env; then
   echo "Generating APP_KEY..."
   php artisan key:generate --force

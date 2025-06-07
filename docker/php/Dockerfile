@@ -5,7 +5,9 @@ RUN apt update && apt install -y \
     unzip \
     libzip-dev \
     libpq-dev \
+    netbase \
     curl \
+    whois \
     && docker-php-ext-install \
     zip \
     pdo \
