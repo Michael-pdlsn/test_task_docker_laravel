@@ -8,12 +8,21 @@
    ```bash
    git clone https://github.com/Michael-pdlsn/test_for_nda_hosting_company.git
    ```
+2. Скопиюуйте файли `project/.env.example` у `project/.env` та  `docker/.env.example` у `docker/.env`.
+    
+   ```bash
+    cp project/.env.example project/.env
+   ```
+   ```bash
+    cp docker/.env.example docker/.env
+   ```
+
+4. Зберіть і запустіть контейнери командою:
+   
    ```bash
    cd test_for_nda_hosting_company/docker
    ```
-2. Скопиюуйте файли `project/.env.example` у `project/.env` та  `docker/.env.example` у `docker/.env`.
 
-4. Зберіть і запустіть контейнери командою:
    ```bash
    docker-compose up --build
    ```
