@@ -17,10 +17,10 @@ https://docs.docker.com/compose/
 2. Скопиюуйте файли `project/.env.example` у `project/.env` та  `docker/.env.example` у `docker/.env`.
     
    ```bash
-    cp project/.env.example project/.env
+    cp test_for_nda_hosting_company/project/.env.example test_for_nda_hosting_company/project/.env
    ```
    ```bash
-    cp docker/.env.example docker/.env
+    cp test_for_nda_hosting_company/docker/.env.example test_for_nda_hosting_company/docker/.env
    ```
 
 4. Зберіть і запустіть контейнери:
