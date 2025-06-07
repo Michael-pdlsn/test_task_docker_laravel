@@ -2,6 +2,12 @@
 
 Сервіс для перевірки WHOIS-інформації по домену. Реалізовано на Laravel, фронтенд на Blade.
 
+Додатково потрібно встановити (якщо ще не встановлений) docker та docker-compose.
+
+https://docs.docker.com/engine/
+
+https://docs.docker.com/compose/
+
 ## Запуск проекту у Docker
 
 1. Клонуйте репозиторій:
