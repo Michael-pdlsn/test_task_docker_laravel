@@ -17,7 +17,7 @@
     cp docker/.env.example docker/.env
    ```
 
-4. Зберіть і запустіть контейнери командою:
+4. Зберіть і запустіть контейнери:
    
    ```bash
    cd test_for_nda_hosting_company/docker
