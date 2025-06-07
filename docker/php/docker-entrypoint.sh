@@ -15,10 +15,4 @@ if ! grep -q '^APP_KEY=.\+' /var/www/html/.env; then
   php artisan key:generate --force
 fi
 
-echo "Waiting 5s for MySQL to be ready..."
-sleep 5
-
-echo "Running migrations..."
-php artisan migrate --force
-
 exec "$@"

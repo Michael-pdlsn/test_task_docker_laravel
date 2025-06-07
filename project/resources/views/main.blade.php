@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Whois</title>
-    <link rel="stylesheet" href="../css/whois.css">
+    <link rel="stylesheet" href="/css/whois.css">
 </head>
 <body>
 <div class="whois-form-container">
@@ -18,7 +18,8 @@
     const whoisLookupRoute = "{{ route('whois.lookup') }}";
     const csrfToken = "{{ csrf_token() }}";
 </script>
-<script src="../js/whois.js"></script>
+<script src="/js/whois.js"></script>
 </body>
 </html>
+
 

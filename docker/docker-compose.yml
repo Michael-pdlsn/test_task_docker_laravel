@@ -7,9 +7,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ${PROJECT_SOURCE}:/var/www/html
-    depends_on:
-      - mysql
-
     networks:
       backend:
         aliases:
@@ -36,20 +33,7 @@ services:
         aliases:
           - app_php
 
-  mysql:
-    image: mysql:${MYSQL_VERSION}
-    container_name: mysql
-    environment:
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-    volumes:
-      - ${MYSQLDATA_PATH}:/var/lib/mysql
-    ports:
-      - "${MYSQL_PORT}:3306"
-    networks:
-      - backend
 networks:
   backend:
     driver: bridge
+

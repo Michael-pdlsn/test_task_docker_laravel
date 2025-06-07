@@ -8,11 +8,6 @@ RUN apt update && apt install -y \
     netbase \
     curl \
     whois \
-    && docker-php-ext-install \
-    zip \
-    pdo \
-    pdo_mysql \
-    mysqli \
     && rm -rf /var/lib/apt/lists/*
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
