@@ -12,21 +12,21 @@ https://docs.docker.com/compose/
 
 1. Клонуйте репозиторій:
    ```bash
-   git clone https://github.com/Michael-pdlsn/test_for_nda_hosting_company.git
+   git clone https://github.com/Michael-pdlsn/test_task_docker_laravel.git
    ```
 2. Скопиюуйте файли `project/.env.example` у `project/.env` та  `docker/.env.example` у `docker/.env`.
     
    ```bash
-    cp test_for_nda_hosting_company/project/.env.example test_for_nda_hosting_company/project/.env
+    cp test_task_docker_laravel/project/.env.example test_task_docker_laravel/project/.env
    ```
    ```bash
-    cp test_for_nda_hosting_company/docker/.env.example test_for_nda_hosting_company/docker/.env
+    cp test_task_docker_laravel/docker/.env.example test_task_docker_laravel/docker/.env
    ```
 
 4. Зберіть і запустіть контейнери:
    
    ```bash
-   cd test_for_nda_hosting_company/docker
+   cd test_task_docker_laravel/docker
    ```
 
    ```bash
