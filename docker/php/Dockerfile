@@ -1,20 +1,19 @@
 FROM php:8.3-fpm
 
-RUN apt update && apt install -y \
-    git \
-    unzip \
-    libzip-dev \
-    libpq-dev \
-    netbase \
-    curl \
-    whois \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        git \
+        unzip \
+        netbase \
+        whois \
+        libicu-dev \
+    && docker-php-ext-install intl \
     && rm -rf /var/lib/apt/lists/*
 
-RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
-    && php composer-setup.php \
-    && php -r "unlink('composer-setup.php');" \
-    && mv composer.phar /usr/local/bin/composer
+# Composer from the official image instead of running an unverified installer script.
+COPY --from=composer:2 /usr/bin/composer /usr/local/bin/composer
 
 COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+# Strip CRLF in case the repo was checked out on Windows without .gitattributes applied.
+RUN sed -i 's/\r$//' /usr/local/bin/docker-entrypoint.sh && chmod +x /usr/local/bin/docker-entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["php-fpm"]
