@@ -1,3 +1,6 @@
 .env
-./data/mysql/*
-./data/nginx/*
+
+# Runtime files written by the nginx container (directories are kept via .gitkeep)
+data/nginx/**
+!data/nginx/**/
+!data/nginx/**/.gitkeep
